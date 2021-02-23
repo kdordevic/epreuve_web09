@@ -1,0 +1,218 @@
+// .App {
+//   text-align: center;
+// }
+
+// .App-logo {
+//   height: 40vmin;
+//   pointer-events: none;
+// }
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .App-logo {
+//     animation: App-logo-spin infinite 20s linear;
+//   }
+// }
+
+// .App-header {
+//   background-color: #282c34;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+// }
+
+// .App-link {
+//   color: #61dafb;
+// }
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+$light-orange: #f9cfb6;
+$dark-orange: #f94512;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  img {
+    padding-left: 20vw;
+    height: 7vh;
+  }
+}
+main {
+  .first-page {
+    background-color: $light-orange;
+    width: 100w;
+    height: 93vh;
+
+    section {
+      position: relative;
+      margin: auto;
+      padding-top: 12vh;
+      display: flex;
+      height: 80vh;
+      width: 60%;
+      .striped-circle {
+        background-image: url('img/lines.png');
+       background-size: 150%;
+        background-position: center;
+        min-width: 150px;
+        min-height: 150px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-50px, 50px);
+      }
+      .circle {
+        background-color: $dark-orange;
+        min-width: 150px;
+        min-height: 150px;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translate(50px, 50px);
+      }
+      .intro {
+        padding: 30px;
+        width: 50%;
+        background-color: white;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        .round-photo {
+          width: 150px;
+          height: 150px;
+          background-color: black;
+          background-image: url("img/curry_de_legume.jpg");
+          background-size: cover;
+          background-position: center;
+          border-radius: 50%;
+        }
+        p {
+          margin-top: 20px;
+          font-size: 12px;
+          width: 85%;
+        }
+        button {
+          margin-top: 20px;
+          background-color: $dark-orange;
+          height: 35px;
+          width: 160px;
+          border: none;
+          border-radius: 5px;
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+      .cook-photo {
+        width: 50%;
+        height: 100%;
+        background-color: springgreen;
+        background-image: url("img/cuistot1.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+  .second-page {
+    margin: auto;
+    width: 65vw;
+    height: 93vh;
+    section{
+      height: 65%;
+      display: flex;
+      .archive{
+        width: 50%;
+        height: 100%;
+        h1{
+          padding-top: 50px;
+          font-size: 60px;
+          font-weight: 400;
+          strong{
+            color: $dark-orange;
+          }
+        }
+         p {
+          margin-top: 20px;
+          font-size: 12px;
+          width: 85%;
+        }
+        button {
+          margin-top: 20px;
+          background-color: $dark-orange;
+          height: 35px;
+          width: 120px;
+          border: none;
+          border-radius:35px;
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+        
+      }
+      .illustration{
+        padding-top: 50px;
+        width: 45%;
+        height: auto;
+        position: relative;
+        .splash{        
+          width: 400px;
+          height: 400px;
+          background-image: url('img/splash.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          
+        .suri{
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(27%, 32%);
+          width:280px;
+          height:280px ;
+          border-radius: 50%;
+          background-image: url('img/suri02.jpg');
+          background-size: cover;
+
+        }}
+      }
+    }
+    .caroussel {
+      
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      img{
+        width: 32%;
+        height: auto;
+
+      }
+
+    }
+  }
+}
+footer {
+  background-color: black;
+  height: 70px;
+  width: 100vw;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  line-height: 70px;
+  a {
+    color: lightblue;
+  }
+}
