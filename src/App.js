@@ -1,10 +1,50 @@
 import './App.scss';
+import { useState, useRef } from "react";
+//import menu from './Menu';
+import Modal from './Modal';
+
 
 function App() {
+  const sound = useRef();
+  
+  const [modalVisible, setModalVisible] = useState(false);
+  const [playSound,setPlaySound]= useState(false);
+  
+  function openM(e) {
+    if (!modalVisible){
+
+    setModalVisible(true);}
+    console.log('test')
+
+
+
+  }
+  function toggleSound(){
+    if(!playSound){
+     
+      sound.current.play();
+      setPlaySound(true);
+    }else {
+      sound.current.pause();
+      setPlaySound(false);
+
+    }
+  }
+  
   return (
     <div className="App">
+      <Modal/>
       <header className="App-header">
-        <img src="img/logo.png" alt='logo'></img>
+        <img src="img/logo.png" alt="logo"></img>
+        <img
+          onClick={toggleSound}
+          className="radio"
+          src="img/radio.png"
+          alt="radio"
+        ></img>
+        <audio ref={sound}>
+          <source src='song/happy.mp3' />
+        </audio>
       </header>
       <main>
         <div className="first-page">
@@ -23,7 +63,7 @@ function App() {
               </p>
               <p>Il est temps de passer commande!</p>
 
-              <button>menu du jour</button>
+              <button onClick={openM}>menu du jour</button>
             </div>
             <div className="cook-photo"></div>
             <div className="circle"></div>
@@ -35,8 +75,14 @@ function App() {
               <h1>
                 <strong>Archives</strong> Gustatives
               </h1>
-              <p>Un menu de la Maison Salvi vous a séduit? Vous refuser de croire qu'il ne reviendra pas aà la carte?</p>
-              <p>Je vous propose de passer en revue les recettes et donner votre avis. Choisissez votre favori ! </p>
+              <p>
+                Un menu de la Maison Salvi vous a séduit? Vous refuser de croire
+                qu'il ne reviendra pas aà la carte?
+              </p>
+              <p>
+                Je vous propose de passer en revue les recettes et donner votre
+                avis. Choisissez votre favori !
+              </p>
               <button>voter</button>
             </div>
             <div className="illustration">
@@ -46,9 +92,9 @@ function App() {
             </div>
           </section>
           <div className="caroussel">
-            <img src="img/1.jpg" alt='meal'></img>
-            <img src="img/2.jpg" alt='meal'></img>
-            <img src="img/3.jpg" alt='meal'></img>
+            <img src="img/1.jpg" alt="meal"></img>
+            <img src="img/2.jpg" alt="meal"></img>
+            <img src="img/3.jpg" alt="meal"></img>
           </div>
         </div>
       </main>
