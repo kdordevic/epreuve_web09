@@ -2,6 +2,7 @@ import './App.scss';
 import { useState, useRef } from "react";
 //import menu from './Menu';
 import Modal from './Modal';
+import Select from "./Select";
 
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
   
   return (
     <div className="App">
-      <Modal/>
+      <Modal />
+      <Select />
       <header className="App-header">
         <img src="img/logo.png" alt="logo"></img>
         <img
@@ -43,7 +45,7 @@ function App() {
           alt="radio"
         ></img>
         <audio ref={sound}>
-          <source src='song/happy.mp3' />
+          <source src="song/happy.mp3" />
         </audio>
       </header>
       <main>

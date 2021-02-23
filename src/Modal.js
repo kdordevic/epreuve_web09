@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 
 function Modal() {
 
+
     const mod = useRef();
     const [closePopup, setClosePopup] = useState(false);
     const close = function(){
@@ -12,7 +13,7 @@ function Modal() {
             mod.current.style.display="none";
         }
     }
-
+    
 
   return (
     <div className= "modal" ref={mod}>

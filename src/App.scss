@@ -182,8 +182,7 @@ footer {
   }
 }
 .modal{
-  display: none;
-  //visibility: hidden;
+  display: block;
   position: fixed;
   z-index: 2;
   width: 100%;
@@ -198,5 +197,18 @@ footer {
     left: 15%;
     padding: 50px;
   }
- 
+}
+.select{
+  display: block;
+  position: fixed;
+  left: 40%;
+  top: 40%;
+  z-index: 2;
+  width: 20%;
+  height: 20%;
+  background-color:white;
+  
+ select{
+   
+ }
 }
